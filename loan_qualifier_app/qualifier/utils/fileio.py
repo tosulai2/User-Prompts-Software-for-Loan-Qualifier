@@ -33,25 +33,28 @@ def load_csv(csvpath):
 """
 Moving this 'save_csv' function from app.py to here as part of the challenge Part 3 - Systems Design: Organize Code
 """
-def save_csv():
+def save_csv(save_csv_csvpath, csvheader, csvdata):
     """"
-    Saves the qualifying loans from the 'qualifying_loans' dictionary to a CSV file 'save_csv_function_output.csv'
+    Saves a CSV file at path provided with the csv header and data provided
+    In this challenge, this will save the qualifying loans from the 'qualifying_loans' dictionary to a CSV file 'save_csv_function_output.csv'
 
     Args:
-        None.
+        save_csv_csvpath (Path): The csv file path you want to save to.
+        csvheader (List): A list of the headers you want to include in the csv file.
+        csvdata (Dictionary): The data you want to add to the csv file
 
     Returns:
         None.
     """
-    save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
+    #save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
+    #csvheader = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
 
     with open(save_csv_csvpath, "w", newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
 
-        # Write the CSV Header columns: Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate
-        header = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
-        csvwriter.writerow(header)
+        # Write the CSV Header columns
+        csvwriter.writerow(csvheader) #[Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate]
 
         # Write the data from 'qualifying_loans' dictionary
-        for row in qualifying_loans:
+        for row in csvdata: #qualifying_loans
             csvwriter.writerow(row.values())
