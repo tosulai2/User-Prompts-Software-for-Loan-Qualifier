@@ -1,0 +1,50 @@
+  405  git commit -m "Finished Part 1"
+  406  cd ~/Documents/UC\ Berkeley\ Fintech\ Bootcamp\ Files/
+  407  cd 'Module 1 Challenge Starter_Code'/
+  408  cd UC_Fintech_Bootcamp_Challenge_1/
+  409  git push origin master
+  410  cd 'Module 1 Challenge Starter_Code'/
+  411  python loan_analyzer.py 
+  412  cd ~/Documents/UC\ Berkeley\ Fintech\ Bootcamp\ Files/
+  413  cd 'Module 1 Challenge Starter_Code'/
+  414  cd UC_Fintech_Bootcamp_Challenge_1/
+  415  git add -a
+  416  git commit -A -m "Finished Part 3: Analyzer Loan Data"
+  417  git commit -a -m "Finished Part 3: Analyzer Loan Data"
+  418  python loan_analyzer.py 
+  419  cd 'Module 1 Challenge Starter_Code'/
+  420  python loan_analyzer.py 
+  421  git commit -a -m "Finished Part 4: Perform Financial Calculations"
+  422  git commit -a -m "Finished Part 5: Conditionally Filter Lists of Loans"
+  423  python loan_analyzer.py 
+  424  git commit -a -m "Finished part 6: Save the results"
+  425  python loan_analyzer.py 
+  426  python loan_analyzer.py 
+  427  git commit -a -m "Included comments"
+  428  cd Documents/UC\ Berkeley\ Fintech\ Bootcamp\ Files/
+  429  cd 
+  430  cd ~
+  431  cd Documents/UC\ Berkeley\ Fintech\ Bootcamp\ Files/'Module 2 Challenge - User Prompts'
+  432  git clone https://github.com/tosulai2/User-Prompts-Software-for-Loan-Qualifier.git
+  433  git commit -a -m "Finished Part 1 - Version Control: Create the Project Repo"
+  434  git push 
+  435  git commit -a -m "Finished Part 2 - Software Requirements: Translate the Business Requirements into Code"
+  436  git commit -a -m "Finished Part 3 - Systems Design: Organize Code"
+  437  git  status
+  438  git commit -a -m "Fixed fileio.py save_csv function for Part 3"
+  439  git add -A 
+  440  git commit -a -m "Finished Part 4 - Usability: Update the CLI"
+  441  conda dev activate
+  442  conda activate dev
+  443  cd loan_qualifier_app/
+  444  pip install fire
+  445  pip install questionary
+  446  git add -A
+  447  git commit -a -m "Fixed errors for Part 4 - Usability: Update the CLI and created test csv file test1.csv"
+  448  git push
+  449  python app.py
+  450  pwd
+  451  cd ..
+  452  cd User-Prompts-Software-for-Loan-Qualifier/
+  453  git status
+  454  history 50 > terminal_history.txt

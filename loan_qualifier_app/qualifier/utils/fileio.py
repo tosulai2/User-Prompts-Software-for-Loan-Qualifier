@@ -55,6 +55,6 @@ def save_csv(save_csv_csvpath, csvheader, csvdata):
         # Write the CSV Header columns
         csvwriter.writerow(csvheader) #[Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate]
 
-        # Write the data from 'qualifying_loans' dictionary
+        # Write the data from 'qualifying_loans' 
         for row in csvdata: #qualifying_loans
             csvwriter.writerow(row)
