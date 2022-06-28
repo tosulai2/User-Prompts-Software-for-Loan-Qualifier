@@ -135,19 +135,21 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
     First asks if the user wants to save a CSV file
-    If user types in yes then it saves it to the user inputed file path
+    If user types in yes then it asks for a file path they want to save it to
+    If they provide a path, it saves it to the user inputed file path and prints 
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+    #save the confirmation condition as a True or False value
     save_confirmation = questionary.confirm("Do you want to save the qualifying loans to a csv file? (Yes or No)").ask()
     
-    if save_confirmation == "Yes":
+    if save_confirmation: #if user said Yes i.e. True
         #Asks user where they want to save the file if they said yes
-        save_csv_csvpath = questionary.path("Nice! What's the path you want to save this to? (Type in with .csv at the end").ask()
-        #save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
+        csvpath = questionary.text("Nice! What's the path you want to save this to? (Type in with .csv at the end)").ask()
+        save_csv_csvpath = Path(csvpath) #placeholder for a filepath to save the csv file for this function
         """
         OR
         csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
@@ -156,7 +158,7 @@ def save_qualifying_loans(qualifying_loans):
         #include the csv header [Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate]
         csvheader = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
         save_csv(save_csv_csvpath, csvheader, qualifying_loans) 
-    #else: 
+        print(f"Perfect! It saved the file to: {csvpath}")
 
 
 
