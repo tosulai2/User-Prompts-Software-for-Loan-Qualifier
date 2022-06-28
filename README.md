@@ -1,6 +1,8 @@
 # User-Prompts-Software-for-Loan-Qualifier
 UC Fintech Bootcamp Challenge 2
-Module 2 Challenge assignment for the UC Berkeley Fintech Bootcamp. In this challenge, I applied software-engineering best practices to add new features and enhancements to the loan qualifier application. 
+Module 2 Challenge assignment for the UC Berkeley Fintech Bootcamp. 
+
+In this challenge, I applied software-engineering best practices to add new features and enhancements to the loan qualifier application. 
 
 Using the loan qualifier CLI, the tool prompts the user to save the results as a CSV file. 
 
