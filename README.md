@@ -15,7 +15,7 @@ Given a list of qualifying loans, when I choose to save the loans, the tool shou
 Using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
 
 Structure
-    App.py (load_bank_data, get_applicant_info, find_qualifying_loans, save_qualifying_loans, run, save_csv):
+    App.py (load_bank_data, get_applicant_info, find_qualifying_loans, save_qualifying_loans, run):
         Data:
             daily_rate_sheet.csv
         Utilized files/functions/libraries (file name & functions):
@@ -24,7 +24,7 @@ Structure
             Fire library
             Questionary library
             calculators.py (calculate_monthly_debt_ratio, calculate_loan_to_value_ratio)
-            fileio.py (load_csv)
+            fileio.py (load_csv, save_csv)
             Max_loan_size.py (filter_max_loan_size)
             Credit_score (filter_credit_score)
             Debt_to_income (filter_debt_to_income)

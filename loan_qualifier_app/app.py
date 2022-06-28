@@ -25,29 +25,32 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
-def save_csv():
-    """"
-    Saves the qualifying loans from the 'qualifying_loans' dictionary to a CSV file 'save_csv_function_output.csv'
+"""
+Moving this 'save_csv' function below to fileio.py here as part of the challenge Part 3 - Systems Design: Organize Code
+"""
+# def save_csv():
+#     """"
+#     Saves the qualifying loans from the 'qualifying_loans' dictionary to a CSV file 'save_csv_function_output.csv'
 
-    Args:
-        None.
+#     Args:
+#         None.
 
-    Returns:
-        None.
-    """
-    save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
+#     Returns:
+#         None.
+#     """
+#     save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
 
-    with open(save_csv_csvpath, "w", newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
+#     with open(save_csv_csvpath, "w", newline='') as csvfile:
+#         csvwriter = csv.writer(csvfile)
 
-        # Write the CSV Header columns: Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate
-        header = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
-        csvwriter.writerow(header)
+#         # Write the CSV Header columns: Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate
+#         header = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
+#         csvwriter.writerow(header)
 
-        # Write the data from 'qualifying_loans' dictionary
-        for row in qualifying_loans:
-            csvwriter.writerow(row.values())
-    return
+#         # Write the data from 'qualifying_loans' dictionary
+#         for row in qualifying_loans:
+#             csvwriter.writerow(row.values())
+#     return
 
 
 def load_bank_data():

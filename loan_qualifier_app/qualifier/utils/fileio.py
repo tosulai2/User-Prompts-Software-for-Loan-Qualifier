@@ -6,6 +6,7 @@ This contains a helper function for loading and saving CSV files.
 """
 import csv
 
+from pathlib import Path #added as part of the challenge Part 3 - Systems Design: Organize Code
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -28,3 +29,29 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+"""
+Moving this 'save_csv' function from app.py to here as part of the challenge Part 3 - Systems Design: Organize Code
+"""
+def save_csv():
+    """"
+    Saves the qualifying loans from the 'qualifying_loans' dictionary to a CSV file 'save_csv_function_output.csv'
+
+    Args:
+        None.
+
+    Returns:
+        None.
+    """
+    save_csv_csvpath = Path("save_csv_function_output.csv") #placeholder for a filepath to save the csv file for this function
+
+    with open(save_csv_csvpath, "w", newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+
+        # Write the CSV Header columns: Lender, Max Loan Amount, Max LTV, Max DTI, Min Credit, Interest rate
+        header = ['Lender', 'Max Loan Amount', 'Max LTV', 'Max DTI', 'Min Credit', 'Interest Rate']
+        csvwriter.writerow(header)
+
+        # Write the data from 'qualifying_loans' dictionary
+        for row in qualifying_loans:
+            csvwriter.writerow(row.values())
